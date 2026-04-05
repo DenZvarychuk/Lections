@@ -1,4 +1,4 @@
-package com.javarush.lections.lection02018.example3;
+package com.javarush.lections.lection0218.example3;
 
 public class Example3 {
 

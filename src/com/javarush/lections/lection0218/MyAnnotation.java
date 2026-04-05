@@ -1,4 +1,4 @@
-package com.javarush.lections.lection02018;
+package com.javarush.lections.lection0218;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

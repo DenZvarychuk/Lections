@@ -1,4 +1,4 @@
-package com.javarush.lections.lection02018.example1;
+package com.javarush.lections.lection0218.example1;
 
 import java.lang.annotation.*;
 

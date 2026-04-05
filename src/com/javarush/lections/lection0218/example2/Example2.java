@@ -1,4 +1,4 @@
-package com.javarush.lections.lection02018.example2;
+package com.javarush.lections.lection0218.example2;
 
 import java.util.List;
 
