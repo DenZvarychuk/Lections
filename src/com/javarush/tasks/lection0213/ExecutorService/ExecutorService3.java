@@ -1,4 +1,4 @@
-package com.javarush.tasks.lection0213;
+package com.javarush.tasks.lection0213.ExecutorService;
 
 import java.util.List;
 import java.util.concurrent.Callable;
@@ -23,13 +23,13 @@ public class ExecutorService3 {
                 .collect(Collectors.toList());
         System.out.printf("passed %d tasks.%n", futures.size());
 
-        // пробуем закрыть
+        // trying to close
         service.shutdown();
-        // ждем окончания работы 100 миллисекунд
+        // wait 100ms
         if (service.awaitTermination(100, TimeUnit.MILLISECONDS)) {
             System.out.println("all tasks completed!");
         } else {
-            // принудительно останавливаем
+            // hard close
             List<Runnable> notExecuted = service.shutdownNow();
             System.out.printf("not finished %d tasks.%n", notExecuted.size());
         }

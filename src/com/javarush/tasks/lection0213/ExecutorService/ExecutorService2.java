@@ -1,9 +1,8 @@
-package com.javarush.tasks.lection0213;
+package com.javarush.tasks.lection0213.ExecutorService;
 
 import java.util.List;
-import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.ExecutorService;
 
 public class ExecutorService2 {
     public static void main(String[] args) throws Exception {
@@ -27,10 +26,10 @@ public class ExecutorService2 {
         // example 3
         // number means ExecutorService successfully processed
         // toString() - tasks passed to ExecutorService but was not processed
-//        ExecutorService service = Executors.newFixedThreadPool(5);
-//        List.of(1, 2, 3, 4, 5, 6, 7, 8).forEach(i -> service.submit(() -> System.out.println(i)));
-//        List<Runnable> runnables = service.shutdownNow();
-//        runnables.forEach(System.out::println);
+        ExecutorService service = Executors.newFixedThreadPool(5);
+        List.of(1, 2, 3, 4, 5, 6, 7, 8).forEach(i -> service.submit(() -> System.out.println(i)));
+        List<Runnable> runnables = service.shutdownNow();
+        runnables.forEach(System.out::println);
 
         // example 4.1
         // we can spot in 3 casas
