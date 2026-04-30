@@ -11,10 +11,10 @@ import java.util.concurrent.*;
 public class ThreadCompare {
 
     private static final BlockingQueue<String> QUEUE = new LinkedBlockingQueue<>();
-    private static ExecutorService executor1 = Executors.newSingleThreadExecutor();
-    private static ExecutorService executor2 = Executors.newCachedThreadPool();
-    private static ExecutorService executor3 = Executors.newWorkStealingPool();
-    private static ExecutorService executor4 = Executors.newFixedThreadPool(10);
+    private static final ExecutorService executor1 = Executors.newSingleThreadExecutor();
+    private static final ExecutorService executor2 = Executors.newCachedThreadPool();
+    private static final ExecutorService executor3 = Executors.newWorkStealingPool();
+    private static final ExecutorService executor4 = Executors.newFixedThreadPool(10);
 
     public static void main(String[] args) {
         runProcess(executor1);

@@ -4,7 +4,7 @@ public class ExampleComplexRecursion {
     static void main(String[] args) {
         // x^n/(n!)
         System.out.println(calculate(3, 2));
-        System.out.println(5*4*3*2*1);
+        System.out.println(5 * 4 * 3 * 2);
     }
 
     private static double calculate(int x, int n) {

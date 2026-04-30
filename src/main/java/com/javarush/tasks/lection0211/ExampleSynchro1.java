@@ -16,11 +16,11 @@ public class ExampleSynchro1 {
         };
         Thread th = new Thread(task);
         th.start();
-        Thread.currentThread().sleep(2000);
+        Thread.sleep(2000);
         System.err.println("Thread state: " + th.getState());
 
         LockSupport.unpark(th);
-        Thread.currentThread().sleep(2000);
+        Thread.sleep(2000);
     }
 
 }
