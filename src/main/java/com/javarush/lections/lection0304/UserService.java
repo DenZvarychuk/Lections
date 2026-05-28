@@ -1,10 +1,14 @@
 package com.javarush.lections.lection0304;
 
-import com.javarush.lections.lection0304.User;
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.Optional;
 
 public class UserService {
+
+    private static final Logger log = LogManager.getLogger(UserService.class);
 
     private final UserRepository userRepository;
     private final UserValidator userValidator;
@@ -16,15 +20,18 @@ public class UserService {
         this.userConvertor = userConvertor;
     }
 
-    public User findById(int id){
+    public User findById(int id) {
 
         return new User("John Doe");
     }
 
-    public void register(String email, String password){
+    public void register(String email, String password) {
+        log.debug("user register");
+
         userValidator.validate(email, password);
         Optional<User> byEmail = userRepository.findByEmail(email);
-        if(byEmail.isPresent()){
+        if (byEmail.isPresent()) {
+            log.info("User with email already exists");
             throw new IllegalArgumentException("User with email already exists");
         }
 
@@ -38,8 +45,8 @@ public class UserService {
 
     }
 
-    public User findByEmail(String email){
-         return new User("John Doe");
+    public User findByEmail(String email) {
+        return new User("John Doe");
     }
 
 }
