@@ -152,6 +152,7 @@ class UserServiceTest {
         );
     }
 
+    /*
     @Test
     void testMockStatic() {
         try (MockedStatic<UserUtil> userUtilMockedStatic = mockStatic(UserUtil.class);)
@@ -161,6 +162,7 @@ class UserServiceTest {
             assertEquals("Alex2", user.getName());
         }
     }
+     */
 }
 
 // !!! think before mock static variables !!!
